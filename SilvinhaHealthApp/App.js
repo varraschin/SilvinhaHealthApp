@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native';
+import { Touchable, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TextInput,} from 'react-native';
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function App() {
   return (
@@ -18,7 +20,22 @@ export default function App() {
             keyboardType='numeric'
           ></TextInput>
         </View>
+        <View style={{margintTop: 25}}>
+          <Text style={styles.label}>Peso</Text>
+          <TextInput
+            style={styles.input}
+            placeholder='Ex. 80.650'
+            keyboardType='numeric'
+          ></TextInput>
+        </View>
 
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={() => alert("ABACATE")}
+        >
+          <Ionicons name="calculator-sharp" size={24} color="#edf2f4" />
+          <Text style={styles.text}>Calcular</Text>
+        </TouchableOpacity>
       </View>
       <StatusBar style='light' />
     </SafeAreaView>
@@ -66,6 +83,23 @@ export default function App() {
       widht: '100%',
       fontSize: 18,
       borderColor: '#D90429',
-      borderBottomWidth: 1,
+      borderBottomWidth: 1
     },
+    button: {
+      width: '100%',
+      paddingVertical: 15,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#ef233c',
+      borderRadius: 15,
+      marginTop: 40,
+      marginBottom: 10,
+    },
+    text: {
+      color: '#edf2f4',
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginLeft: 5,
+    }
 });
