@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Touchable, TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View, SafeAreaView, TextInput,} from 'react-native';
