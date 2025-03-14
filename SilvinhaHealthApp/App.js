@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Touchable, TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View, SafeAreaView, TextInput,} from 'react-native';
@@ -36,6 +37,12 @@ export default function App() {
           <Ionicons name="calculator-sharp" size={24} color="#edf2f4" />
           <Text style={styles.text}>Calcular</Text>
         </TouchableOpacity>
+
+        <View style={styles.imcContainer}>
+          <Text style={styles.imcText}>Preencha o peso e a altura</Text>
+          <Text style={styles.imcResult}>20</Text>
+        </View>
+
       </View>
       <StatusBar style='light' />
     </SafeAreaView>
@@ -101,5 +108,21 @@ export default function App() {
       fontSize: 24,
       fontWeight: 'bold',
       marginLeft: 5,
+    },
+    imcContainer: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      widht: '100%',
+    },
+    imcText: {
+      fontSize: 18,
+      color: '#ef233c',
+      fontWeight: 'bold',
+    },
+    imcResult: {
+      fontSize: 48,
+      color: '#ef233c',
+      fontWeight: 'bold',
     }
 });
