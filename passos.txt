@@ -10,6 +10,8 @@ npx create-expo-app@latest SilvinhaHealthApp --template blank
 
 cd SilvinhaHealthApp
 
+npm expo install
+
 Executar o projeto:
 npx expo start --localhost --android
 
